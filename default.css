@@ -3,10 +3,64 @@
     src: url(fonts/bank.ttf);
 }
 
-body {
-    margin:0px 0px 0px 0px;
-	width:1024px;
-	height:668px;
+.patchworkcontent {
+    text-decoration:none;
+    font-family: Patchwork, Copperplate, sans-serif;
+    
+	display:block;
+	width:452px;
+	height:348px;
+
+    background: white;
+	/* css3 */
+	-moz-border-radius:2px;
+	-webkit-border-radius:2px;
+	border-radius:2px; /* standards version last */
+
+    box-shadow: 0px 4px 5px #000000;
+    -moz-box-shadow: 0px 4px 5px #000000;
+    -webkit-box-shadow: 0px 4px 5px #000000;
+}
+
+
+.patchworkcontent a:link {
+    font-size:14px;
+    width:210px;
+    color:#214A66;
+}
+
+.patchworkcontent h1 {
+    padding-top:10px;
+	padding-left:10px;
+    font-size:18px;
+	color:#214A66;
+}
+
+.patchworkcontent h2 {
+    padding-left:10px;
+	font-size:16px;
+	color:#214A66;
+}
+
+.patchworkcontent p {
+    padding-left:10px;
+	font-size:14px;
+    width:210px;
+	color:#000000;
+}
+
+.patchworkcontentcenter  {
+    padding-left:10px;
+    vertical-align:middle;
+	font-size:14px;
+    width:226px;
+	color:#000000;
+}
+
+.patchworkcontentimage {
+    position:absolute;
+    right:5px;
+    bottom:5px;
 }
 
 .patchworkwordpress {
@@ -50,7 +104,6 @@ body {
 }
 
 .patchworklogo {
-    margin:0px 0px 0px 0px;
     position:absolute;
     left:20px;
     top:20px;
@@ -60,84 +113,7 @@ body {
     border:0;
 }
 
-.patchworktorso {
-    margin:0px 0px 0px 0px;
-    position:absolute;
-    right:5px;
-    top:5px;
-    z-index:20;
-    
-	display:block;
-}
-
-.patchworkprofileimage {
-    margin:0px 0px 0px 0px;
-    position:absolute;
-    right:5px;
-    bottom:5px;
-    z-index:21;
-    
-	display:block;
-}
-
-.patchworkernstssonbox {
-    margin:0px 0px 0px 0px;
-    position:absolute;
-    left:40px;
-    top:160px;
-    z-index:9;
-    
-	display:block;
-	width:452px;
-	height:348px;
-
-	font-size:20px;
-    text-decoration:none;
-	color:#214A66;
-    font-family: Patchwork, Copperplate, sans-serif;
-
-    background: white;
-	/* css3 */
-	-moz-border-radius:2px;
-	-webkit-border-radius:2px;
-	border-radius:2px; /* standards version last */
-
-    box-shadow: 0px 4px 5px #000000;
-    -moz-box-shadow: 0px 4px 5px #000000;
-    -webkit-box-shadow: 0px 4px 5px #000000;
-    visibility:hidden;
-}
-
-.patchworkhjortbox {
-    margin:0px 0px 0px 0px;
-    position:absolute;
-    left:532px;
-    top:160px;
-    z-index:10;
-    
-	display:block;
-	width:452px;
-	height:348px;
-
-	font-size:20px;
-    text-decoration:none;
-	color:#214A66;
-    font-family: Patchwork, Copperplate, sans-serif;
-
-    background: white;
-	/* css3 */
-	-moz-border-radius:2px;
-	-webkit-border-radius:2px;
-	border-radius:2px; /* standards version last */
-
-    box-shadow: 0px 4px 5px #000000;
-    -moz-box-shadow: 0px 4px 5px #000000;
-    -webkit-box-shadow: 0px 4px 5px #000000;
-    visibility:hidden;
-}
-
 .patchworkblog {
-    margin:0px 0px 0px 0px;
     position:absolute;
     left:20px;
     top:608px;
@@ -166,7 +142,6 @@ body {
 }
 
 .patchworkmenu {
-    margin:0px 0px 0px 0px;
     position:absolute;
     left:664px;
     top:20px;
@@ -196,7 +171,7 @@ body {
 }
 
 .patchworktext {
-    margin:0px 5px 0px 5px;
+    padding:0px 5px 0px 5px;
 	font-size:12px;
     text-decoration:none;
 	color:#ffffff;
@@ -204,7 +179,6 @@ body {
 }
 
 .patchworkinfo {
-    margin:0px 0px 0px 0px;
     position:absolute;
     left:578px;
     top:621px;
@@ -216,7 +190,6 @@ body {
 }
 
 .patchworkname {
-    margin:0px 0px 0px 0px;
     position:absolute;
     left:137px;
     top:20px;
@@ -227,38 +200,28 @@ body {
     font-family: Patchwork, Copperplate, sans-serif;
 }
 
-.patchworkcontentbox {
-    margin:0px 0px 0px 0px;
-    padding:5px 0px 0px 5px;
+.patchworkleftbox {
+    z-index:30;
+    position:absolute;
+    left:40px;
+    top:160px;
+}
+
+.patchworkrightbox {
+    z-index:31;
+    position:absolute;
+    left:532px;
+    top:160px;
+}
+
+.patchworkcenterbox {
+    z-index:32;
     position:absolute;
     left:286px;
     top:160px;
-    z-index:8;
-    
-	display:block;
-	width:452px;
-	height:343px;
-
-	font-size:18px;
-    text-decoration:none;
-	color:#000000;
-    font-family: Patchwork, sans-serif;
-
-    background: white;
-	/* css3 */
-	-moz-border-radius:2px;
-	-webkit-border-radius:2px;
-	border-radius:2px; /* standards version last */
-
-    box-shadow: 0px 4px 5px #000000;
-    -moz-box-shadow: 0px 4px 5px #000000;
-    -webkit-box-shadow: 0px 4px 5px #000000;
 }
 
-.patchworkcontentbox a:link {color:#214A66;}
-
 .patchworkbackground1 {
-    margin:0px 0px 0px 0px;
     position:absolute;
     left:0px;
     top:0px;
@@ -284,7 +247,6 @@ body {
 }
 
 .patchworkbackground2 {
-    margin:0px 0px 0px 0px;
     position:absolute;
     left:512px;
     top:334px;
@@ -310,7 +272,6 @@ body {
 }
 
 .patchworkbackground3 {
-    margin:0px 0px 0px 0px;
     position:absolute;
     left:0px;
     top:0px;

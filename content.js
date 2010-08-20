@@ -6,8 +6,7 @@ function loadBody() {
     document.getElementById("mission").style.visibility = "hidden";
     document.getElementById("offering").style.visibility = "hidden";
     document.getElementById("home").style.visibility = "visible";
-    document.getElementById("hjortbox").style.visibility = "hidden";
-    document.getElementById("ernstssonbox").style.visibility = "hidden";
+    document.getElementById("aboutus").style.visibility = "hidden";
 }
 
 function showHome() {
@@ -15,8 +14,7 @@ function showHome() {
     document.getElementById("mission").style.visibility = "hidden";
     document.getElementById("offering").style.visibility = "hidden";
     document.getElementById("home").style.visibility = "visible";
-    document.getElementById("hjortbox").style.visibility = "hidden";
-    document.getElementById("ernstssonbox").style.visibility = "hidden";
+    document.getElementById("aboutus").style.visibility = "hidden";
 }
 
 function showMission() {
@@ -24,8 +22,7 @@ function showMission() {
     document.getElementById("mission").style.visibility = "visible";
     document.getElementById("offering").style.visibility = "hidden";
     document.getElementById("home").style.visibility = "hidden";
-    document.getElementById("hjortbox").style.visibility = "hidden";
-    document.getElementById("ernstssonbox").style.visibility = "hidden";
+    document.getElementById("aboutus").style.visibility = "hidden";
 }
 
 function showAboutUs() {
@@ -33,8 +30,7 @@ function showAboutUs() {
     document.getElementById("mission").style.visibility = "hidden";
     document.getElementById("offering").style.visibility = "hidden";
     document.getElementById("home").style.visibility = "hidden";
-    document.getElementById("hjortbox").style.visibility = "visible";
-    document.getElementById("ernstssonbox").style.visibility = "visible";
+    document.getElementById("aboutus").style.visibility = "visible";
 }
 
 function showOffering() {
@@ -42,8 +38,7 @@ function showOffering() {
     document.getElementById("mission").style.visibility = "hidden";
     document.getElementById("offering").style.visibility = "visible";
     document.getElementById("home").style.visibility = "hidden";
-    document.getElementById("hjortbox").style.visibility = "hidden";
-    document.getElementById("ernstssonbox").style.visibility = "hidden";
+    document.getElementById("aboutus").style.visibility = "hidden";
 }
 
 function showContactInfo() {
@@ -51,6 +46,5 @@ function showContactInfo() {
     document.getElementById("mission").style.visibility = "hidden";
     document.getElementById("offering").style.visibility = "hidden";
     document.getElementById("home").style.visibility = "hidden";
-    document.getElementById("hjortbox").style.visibility = "hidden";
-    document.getElementById("ernstssonbox").style.visibility = "hidden";
+    document.getElementById("aboutus").style.visibility = "hidden";
 }
