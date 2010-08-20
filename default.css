@@ -1,0 +1,324 @@
+body {
+    margin:0px 0px 0px 0px;
+	width:1024px;
+	height:668px;
+}
+
+.patchworkwordpress {
+    position:absolute;
+    left:116px;
+    bottom:5px;
+    z-index:30;
+    
+	display:block;
+    border:0;
+}
+
+.patchworkfacebook {
+    position:absolute;
+    left:5px;
+    bottom:5px;
+    z-index:31;
+    
+	display:block;
+    border:0;
+}
+
+.patchworklinkedin {
+    position:absolute;
+    bottom:5px;
+    left:79px;
+    z-index:32; 
+    
+	display:block;
+    border:0;
+}
+
+.patchworktwitter {
+    position:absolute;
+    left:42px;
+    bottom:5px;
+    z-index:33;
+    
+	display:block;
+    border:0;
+}
+
+.patchworklogo {
+    margin:0px 0px 0px 0px;
+    position:absolute;
+    left:20px;
+    top:20px;
+    z-index:7;
+    
+	display:block;
+    border:0;
+}
+
+.patchworktorso {
+    margin:0px 0px 0px 0px;
+    position:absolute;
+    right:5px;
+    top:5px;
+    z-index:20;
+    
+	display:block;
+}
+
+.patchworkprofileimage {
+    margin:0px 0px 0px 0px;
+    position:absolute;
+    right:5px;
+    bottom:5px;
+    z-index:21;
+    
+	display:block;
+}
+
+.patchworkernstssonbox {
+    margin:0px 0px 0px 0px;
+    position:absolute;
+    left:40px;
+    top:160px;
+    z-index:9;
+    
+	display:block;
+	width:452px;
+	height:348px;
+
+	font-size:20px;
+    text-decoration:none;
+	color:#214A66;
+    font-family: "Bank Gothic", Times, serif;
+
+    background: white;
+	/* css3 */
+	-moz-border-radius:2px;
+	-webkit-border-radius:2px;
+	border-radius:2px; /* standards version last */
+
+    box-shadow: 0px 4px 5px #000000;
+    -moz-box-shadow: 0px 4px 5px #000000;
+    -webkit-box-shadow: 0px 4px 5px #000000;
+    visibility:hidden;
+}
+
+.patchworkhjortbox {
+    margin:0px 0px 0px 0px;
+    position:absolute;
+    left:532px;
+    top:160px;
+    z-index:10;
+    
+	display:block;
+	width:452px;
+	height:348px;
+
+	font-size:20px;
+    text-decoration:none;
+	color:#214A66;
+    font-family: "Bank Gothic", Times, serif;
+
+    background: white;
+	/* css3 */
+	-moz-border-radius:2px;
+	-webkit-border-radius:2px;
+	border-radius:2px; /* standards version last */
+
+    box-shadow: 0px 4px 5px #000000;
+    -moz-box-shadow: 0px 4px 5px #000000;
+    -webkit-box-shadow: 0px 4px 5px #000000;
+    visibility:hidden;
+}
+
+.patchworkblog {
+    margin:0px 0px 0px 0px;
+    position:absolute;
+    left:20px;
+    top:608px;
+    z-index:6;
+
+	display:block;
+	width:340px;
+	height:40px;
+	line-height:40px;
+	
+	/* css3 */
+	-moz-border-radius:20px;
+	-webkit-border-radius:20px;
+	border-radius:20px; /* standards version last */
+    
+    text-align:center;
+    
+    background-color:#114821;
+	/* NOTE: webkit gradient implementation is not as per spec */
+	background:-webkit-gradient(linear, left top, left bottom, from(#93C181), to(#114821));
+	background:-moz-linear-gradient(top, #93C181, #114821);
+	background:linear-gradient(top, #93C181, #114821); /* standards version last */
+    box-shadow: 0px 4px 5px #000000;
+    -moz-box-shadow: 0px 4px 5px #000000;
+    -webkit-box-shadow: 0px 4px 5px #000000;
+}
+
+.patchworkmenu {
+    margin:0px 0px 0px 0px;
+    position:absolute;
+    left:664px;
+    top:20px;
+    z-index:5;    
+
+	display:block;
+	width:340px;
+	height:40px;
+	line-height:40px;
+	
+	/* css3 */
+	-moz-border-radius:20px;
+	-webkit-border-radius:20px;
+	border-radius:20px; /* standards version last */
+
+    text-align:center;
+
+    background-color:#214A66;
+    
+	/* NOTE: webkit gradient implementation is not as per spec */
+	background:-webkit-gradient(linear, left top, left bottom, from(#214A66), to(#7BA7C4));
+	background:-moz-linear-gradient(top, #214A66, #7BA7C4);
+	background:linear-gradient(top, #214A66, #7BA7C4); /* standards version last */
+    box-shadow: 0px 4px 5px #000000;
+    -moz-box-shadow: 0px 4px 5px #000000;
+    -webkit-box-shadow: 0px 4px 5px #000000;
+}
+
+.patchworktext {
+    margin:0px 5px 0px 5px;
+	font-size:12px;
+    text-decoration:none;
+	color:#ffffff;
+    font-family: "Bank Gothic", Times, serif;
+}
+
+.patchworkinfo {
+    margin:0px 0px 0px 0px;
+    position:absolute;
+    left:578px;
+    top:621px;
+    z-index:4;
+	font-size:25px;
+    text-decoration:none;
+	color:#114821;
+    font-family: "Bank Gothic", Times, serif;
+}
+
+.patchworkname {
+    margin:0px 0px 0px 0px;
+    position:absolute;
+    left:137px;
+    top:20px;
+    z-index:3;
+	font-size:25px;
+    text-decoration:none;
+	color:#214A66;
+    font-family: "Bank Gothic", Times, serif;
+}
+
+.patchworkcontentbox {
+    margin:0px 0px 0px 0px;
+    padding:5px 0px 0px 5px;
+    position:absolute;
+    left:286px;
+    top:160px;
+    z-index:8;
+    
+	display:block;
+	width:452px;
+	height:343px;
+
+	font-size:18px;
+    text-decoration:none;
+	color:#000000;
+    font-family: "Bank Gothic", Times, serif;
+
+    background: white;
+	/* css3 */
+	-moz-border-radius:2px;
+	-webkit-border-radius:2px;
+	border-radius:2px; /* standards version last */
+
+    box-shadow: 0px 4px 5px #000000;
+    -moz-box-shadow: 0px 4px 5px #000000;
+    -webkit-box-shadow: 0px 4px 5px #000000;
+}
+
+.patchworkcontentbox a:link {color:#214A66;}
+
+.patchworkbackground1 {
+    margin:0px 0px 0px 0px;
+    position:absolute;
+    left:0px;
+    top:0px;
+    z-index:2;
+    
+	display:block;
+	width:512px;
+	height:334px;
+    
+	outline:#FFFFFF dashed 2px;
+    
+	/* css3 */
+	-moz-border-radius:2px;
+	-webkit-border-radius:2px;
+	border-radius:2px; /* standards version last */
+    
+    background-color:#93C181;
+    /* NOTE: webkit gradient implementation is not as per spec */
+	background:-webkit-gradient(linear, left top, left bottom, from(#93C181), to(#114821));
+	background:-moz-linear-gradient(top, #93C181, #114821);
+	background:linear-gradient(top, #93C181, #114821); /* standards version last */
+
+}
+
+.patchworkbackground2 {
+    margin:0px 0px 0px 0px;
+    position:absolute;
+    left:512px;
+    top:334px;
+    z-index:1;
+
+	display:block;
+	width:512px;
+	height:334px;
+    
+	outline:#FFFFFF dashed 2px;
+    
+	/* css3 */
+	-moz-border-radius:2px;
+	-webkit-border-radius:2px;
+	border-radius:2px; /* standards version last */
+    
+    background-color:#7BA7C4;
+	/* NOTE: webkit gradient implementation is not as per spec */
+	background:-webkit-gradient(linear, left top, left bottom, from(#214A66), to(#7BA7C4));
+	background:-moz-linear-gradient(top, #214A66, #7BA7C4);
+	background:linear-gradient(top, #214A66, #7BA7C4); /* standards version last */
+
+}
+
+.patchworkbackground3 {
+    margin:0px 0px 0px 0px;
+    position:absolute;
+    left:0px;
+    top:0px;
+    z-index:0;
+    
+	display:block;
+	width:1024px;
+	height:668px;
+    
+    background-color:#B0B0B0;
+	/* NOTE: webkit gradient implementation is not as per spec */
+	background:-webkit-gradient(linear, left top, left bottom, from(#B0B0B0), to(#FFFFFF));
+	background:-moz-linear-gradient(top, #B0B0B0, #FFFFFF);
+	background:linear-gradient(top, #B0B0B0, #FFFFFF); /* standards version last */
+
+}
