@@ -1,3 +1,8 @@
+@font-face {
+    font-family: Patchwork;
+    src: url(fonts/bank.ttf);
+}
+
 body {
     margin:0px 0px 0px 0px;
 	width:1024px;
@@ -89,7 +94,7 @@ body {
 	font-size:20px;
     text-decoration:none;
 	color:#214A66;
-    font-family: "Bank Gothic", Times, serif;
+    font-family: Patchwork, Copperplate, sans-serif;
 
     background: white;
 	/* css3 */
@@ -117,7 +122,7 @@ body {
 	font-size:20px;
     text-decoration:none;
 	color:#214A66;
-    font-family: "Bank Gothic", Times, serif;
+    font-family: Patchwork, Copperplate, sans-serif;
 
     background: white;
 	/* css3 */
@@ -195,7 +200,7 @@ body {
 	font-size:12px;
     text-decoration:none;
 	color:#ffffff;
-    font-family: "Bank Gothic", Times, serif;
+    font-family: Patchwork, Copperplate, sans-serif;
 }
 
 .patchworkinfo {
@@ -207,7 +212,7 @@ body {
 	font-size:25px;
     text-decoration:none;
 	color:#114821;
-    font-family: "Bank Gothic", Times, serif;
+    font-family: Patchwork, Copperplate, sans-serif;
 }
 
 .patchworkname {
@@ -219,7 +224,7 @@ body {
 	font-size:25px;
     text-decoration:none;
 	color:#214A66;
-    font-family: "Bank Gothic", Times, serif;
+    font-family: Patchwork, Copperplate, sans-serif;
 }
 
 .patchworkcontentbox {
@@ -237,7 +242,7 @@ body {
 	font-size:18px;
     text-decoration:none;
 	color:#000000;
-    font-family: "Bank Gothic", Times, serif;
+    font-family: Patchwork, sans-serif;
 
     background: white;
 	/* css3 */
