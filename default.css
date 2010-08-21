@@ -22,6 +22,25 @@
     -webkit-box-shadow: 0px 4px 5px #000000;
 }
 
+.patchworkcontentwide {
+    text-decoration:none;
+    font-family: Patchwork, Copperplate, sans-serif;
+    
+	display:block;
+	width:452px;
+	height:348px;
+
+    background: white;
+	/* css3 */
+	-moz-border-radius:2px;
+	-webkit-border-radius:2px;
+	border-radius:2px; /* standards version last */
+
+    box-shadow: 0px 4px 5px #000000;
+    -moz-box-shadow: 0px 4px 5px #000000;
+    -webkit-box-shadow: 0px 4px 5px #000000;
+}
+
 
 .patchworkcontent a:link {
     font-size:14px;
@@ -32,6 +51,7 @@
 .patchworkcontent h1 {
     padding-top:10px;
 	padding-left:10px;
+	width:420px;
     font-size:18px;
 	color:#214A66;
 }
@@ -39,6 +59,7 @@
 .patchworkcontent h2 {
     padding-left:10px;
 	font-size:16px;
+	width:420px;
 	color:#214A66;
 }
 
@@ -46,6 +67,28 @@
     padding-left:10px;
 	font-size:14px;
     width:210px;
+	color:#000000;
+}
+
+.patchworkcontentwide h1 {
+    padding-top:10px;
+	padding-left:10px;
+    font-size:18px;
+	width:420px;
+	color:#214A66;
+}
+
+.patchworkcontentwide h2 {
+    padding-left:10px;
+	font-size:16px;
+	width:420px;
+	color:#214A66;
+}
+
+.patchworkcontentwide p {
+    padding-left:10px;
+	font-size:14px;
+	width:420px;
 	color:#000000;
 }
 
