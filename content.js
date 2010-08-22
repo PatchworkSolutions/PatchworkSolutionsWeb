@@ -10,9 +10,6 @@ function twitterfeed(twitterfeed) {
 }
 
 function loadBody() {
-    window.resizeTo(1026,740);
-    window.innerHeight = 740;
-    window.innerWidth = 1026;
     document.getElementById("body").style.visibility = "visible";
     document.getElementById("contactinfo").style.visibility = "hidden";
     document.getElementById("mission").style.visibility = "hidden";
