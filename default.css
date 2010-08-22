@@ -86,9 +86,16 @@
 }
 
 .patchworkcontentwide p {
-    padding-left:10px;
+    padding-left:15px;
 	font-size:14px;
 	width:420px;
+	color:#000000;
+}
+
+.patchworkcontentwide li {
+    padding-left:15px;
+	font-size:14px;
+	width:390px;
 	color:#000000;
 }
 
