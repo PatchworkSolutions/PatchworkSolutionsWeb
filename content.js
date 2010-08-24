@@ -5,7 +5,7 @@ var feed = "";
 function twitterfeed(twitterfeed) {
 	feed = "<h1>News</h1>";
 	for (i=0; i<twitterfeed.length; i++) {
-		feed = feed.concat("<h2>", twitterfeed[i].created_at.substr(0, 16),"</h2><p>",twitterfeed[i].text.parseURL().parseHashtag().parseUsername(),"</p>");
+		feed = feed.concat("<h2>", twitterfeed[i].created_at.substr(0, 10),"</h2><p>",twitterfeed[i].text.parseURL().parseHashtag().parseUsername(),"</p>");
 	}
 }
 
