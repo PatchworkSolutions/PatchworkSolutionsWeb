@@ -9,7 +9,7 @@ body {
 
 .patchworkcontent {
     text-decoration:none;
-    font-family: Patchwork, Copperplate, sans-serif;
+    font-family: Copperplate, sans-serif;
     
 	display:block;
 	width:452px;
@@ -21,14 +21,15 @@ body {
 	-webkit-border-radius:2px;
 	border-radius:2px; /* standards version last */
 
-    box-shadow: 0px 4px 5px #000000;
-    -moz-box-shadow: 0px 4px 5px #000000;
-    -webkit-box-shadow: 0px 4px 5px #000000;
+    box-shadow: 2px 4px 5px #000000;
+    -moz-box-shadow: 2px 4px 5px #000000;
+    -webkit-box-shadow: 2px 4px 5px #000000;
+	filter: progid:DXImageTransform.Microsoft.Shadow(Color=#000000, Direction=145);
 }
 
 .patchworkcontentwide {
     text-decoration:none;
-    font-family: Patchwork, Copperplate, sans-serif;
+    font-family: Copperplate, sans-serif;
     
 	display:block;
 	width:452px;
@@ -40,9 +41,10 @@ body {
 	-webkit-border-radius:2px;
 	border-radius:2px; /* standards version last */
 
-    box-shadow: 0px 4px 5px #000000;
-    -moz-box-shadow: 0px 4px 5px #000000;
-    -webkit-box-shadow: 0px 4px 5px #000000;
+    box-shadow: 2px 4px 5px #000000;
+    -moz-box-shadow: 2px 4px 5px #000000;
+    -webkit-box-shadow: 2px 4px 5px #000000;
+	filter: progid:DXImageTransform.Microsoft.Shadow(Color=#000000, Direction=145);
 }
 
 
@@ -70,7 +72,7 @@ body {
 .patchworkcontent p {
     padding-left:15px;
 	font-size:14px;
-    width:210px;
+    width:200px;
 	color:#000000;
 }
 
@@ -181,18 +183,22 @@ body {
 	/* css3 */
 	-moz-border-radius:20px;
 	-webkit-border-radius:20px;
-	border-radius:20px; /* standards version last */
+	border-radius:20px;
     
     text-align:center;
     
     background-color:#114821;
-	/* NOTE: webkit gradient implementation is not as per spec */
+
+	filter: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#93C181,endColorStr=#114821);
+	-ms-filter: 'progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#93C181,endColorStr=#114821)';
+	
 	background:-webkit-gradient(linear, left top, left bottom, from(#93C181), to(#114821));
 	background:-moz-linear-gradient(top, #93C181, #114821);
-	background:linear-gradient(top, #93C181, #114821); /* standards version last */
-    box-shadow: 0px 4px 5px #000000;
-    -moz-box-shadow: 0px 4px 5px #000000;
-    -webkit-box-shadow: 0px 4px 5px #000000;
+	background:linear-gradient(top, #93C181, #114821);
+    box-shadow: 2px 4px 5px #000000;
+    -moz-box-shadow: 2px 4px 5px #000000;
+    -webkit-box-shadow: 2px 4px 5px #000000;
+	filter: progid:DXImageTransform.Microsoft.Shadow(Color=#000000, Direction=145);
 }
 
 .patchworkmenu {
@@ -209,19 +215,23 @@ body {
 	/* css3 */
 	-moz-border-radius:20px;
 	-webkit-border-radius:20px;
-	border-radius:20px; /* standards version last */
+	border-radius:20px;
 
     text-align:center;
 
     background-color:#214A66;
     
-	/* NOTE: webkit gradient implementation is not as per spec */
+
+	filter: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#214A66,endColorStr=#7BA7C4);
+	-ms-filter: 'progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#214A66,endColorStr=#7BA7C4)';
+	
 	background:-webkit-gradient(linear, left top, left bottom, from(#214A66), to(#7BA7C4));
 	background:-moz-linear-gradient(top, #214A66, #7BA7C4);
-	background:linear-gradient(top, #214A66, #7BA7C4); /* standards version last */
-    box-shadow: 0px 4px 5px #000000;
-    -moz-box-shadow: 0px 4px 5px #000000;
-    -webkit-box-shadow: 0px 4px 5px #000000;
+	background:linear-gradient(top, #214A66, #7BA7C4);
+    box-shadow: 2px 4px 5px #000000;
+    -moz-box-shadow: 2px 4px 5px #000000;
+    -webkit-box-shadow: 2px 4px 5px #000000;
+	filter: progid:DXImageTransform.Microsoft.Shadow(Color=#000000, Direction=145);
 }
 
 .patchworktext {
@@ -229,7 +239,7 @@ body {
 	font-size:12px;
     text-decoration:none;
 	color:#ffffff;
-    font-family: Patchwork, Copperplate, sans-serif;
+    font-family: Copperplate, sans-serif;
 }
 
 .patchworkinfo {
@@ -240,7 +250,7 @@ body {
 	font-size:25px;
     text-decoration:none;
 	color:#114821;
-    font-family: Patchwork, Copperplate, sans-serif;
+    font-family: Copperplate, sans-serif;
 }
 
 .patchworkname {
@@ -288,13 +298,15 @@ body {
 	/* css3 */
 	-moz-border-radius:2px;
 	-webkit-border-radius:2px;
-	border-radius:2px; /* standards version last */
+	border-radius:2px;
     
     background-color:#93C181;
-    /* NOTE: webkit gradient implementation is not as per spec */
+
+	filter: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#93C181,endColorStr=#114821);
+	-ms-filter: 'progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#93C181,endColorStr=#114821)';
 	background:-webkit-gradient(linear, left top, left bottom, from(#93C181), to(#114821));
 	background:-moz-linear-gradient(top, #93C181, #114821);
-	background:linear-gradient(top, #93C181, #114821); /* standards version last */
+	background:linear-gradient(top, #93C181, #114821);
 
 }
 
@@ -311,13 +323,16 @@ body {
 	/* css3 */
 	-moz-border-radius:2px;
 	-webkit-border-radius:2px;
-	border-radius:2px; /* standards version last */
+	border-radius:2px;
     
     background-color:#7BA7C4;
-	/* NOTE: webkit gradient implementation is not as per spec */
+	
+	filter: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#214A66,endColorStr=#7BA7C4);
+	-ms-filter: 'progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#214A66,endColorStr=#7BA7C4)';
+	
 	background:-webkit-gradient(linear, left top, left bottom, from(#214A66), to(#7BA7C4));
 	background:-moz-linear-gradient(top, #214A66, #7BA7C4);
-	background:linear-gradient(top, #214A66, #7BA7C4); /* standards version last */
+	background:linear-gradient(top, #214A66, #7BA7C4);
 
 }
 
@@ -328,13 +343,17 @@ body {
     z-index:0;
     
 	display:block;
-	width:1024px;
-	height:668px;
+	width:100%;
+	height:100%;
     
     background-color:#B0B0B0;
-	/* NOTE: webkit gradient implementation is not as per spec */
+
+	filter: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#B0B0B0,endColorStr=#FFFFFF);
+	-ms-filter: 'progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#B0B0B0,endColorStr=#FFFFFF)';
+	
 	background:-webkit-gradient(linear, left top, left bottom, from(#B0B0B0), to(#FFFFFF));
 	background:-moz-linear-gradient(top, #B0B0B0, #FFFFFF);
-	background:linear-gradient(top, #B0B0B0, #FFFFFF); /* standards version last */
+	background:linear-gradient(top, #B0B0B0, #FFFFFF);
+
 
 }
