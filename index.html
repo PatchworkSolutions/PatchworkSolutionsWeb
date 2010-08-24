@@ -4,11 +4,11 @@
 
 	<head>
 		<title>Patchwork Solutions</title>
-        <link rel="stylesheet" href="default.css"/>
-        <link rel="icon" type="image/png" href="images/icon32.png">
-        <link rel="apple-touch-icon-precomposed" href="images/icon126.png" />
-    	<script type="text/javascript" src="content.js"></script>
-    	<script type="text/javascript" src="http://api.twitter.com/1/statuses/user_timeline.json?screen_name=ptchwrk&count=3&&callback=twitterfeed"></script>
+		<link rel="stylesheet" href="default.css"/>
+		<link rel="icon" type="image/png" href="images/icon32.png">
+		<link rel="apple-touch-icon-precomposed" href="images/icon126.png" />
+		<script type="text/javascript" src="content.js"></script>
+		<script type="text/javascript" src="http://api.twitter.com/1/statuses/user_timeline.json?screen_name=ptchwrk&count=3&&callback=twitterfeed"></script>
 		<script type="text/javascript">
 
 		  var _gaq = _gaq || [];
@@ -16,128 +16,130 @@
 		  _gaq.push(['_trackPageview']);
 
 		  (function() {
-		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 		  })();
 
 		</script>  
 	</head>
 
 	<body onload="loadBody()" id="body">
-        <div class="patchworkbackground1"></div>
-        <div class="patchworkbackground2"></div>
-        <div class="patchworkbackground3"></div>
-        
-        <a href="" onclick="showNewsFeed(); return false;" title="Home"><img src="images/logo.png" class="patchworklogo"/></a>
-        <a class="patchworkname" href="" onclick="showNewsFeed(); return false;" title="Home">Patchwork Solutions AB</a>
-        <a class="patchworkinfo" href="mailto:info@patchworksolutions.com" title="Info">info@patchworksolutions.com</a>
-        
-        <div class="patchworkmenu">
-            <a class="patchworktext" href="" onclick="showMission(); return false;" title="Mission">Mission</a>
-            <a class="patchworktext" href="" onclick="showAboutUs(); return false;" title="About us">About us</a>
-            <a class="patchworktext" href="" onclick="showOffering(); return false;" title="Offering">Offering</a>
-            <a class="patchworktext" href="" onclick="showContactInfo(); return false;" title="Contact">Contact</a>
-        </div>
-        
-        <div class="patchworkblog">
-            <a class="patchworktext" href="http://blog.patchworksolutions.com" title="The Patchwork Blog">The Patchwork Blog</a>
-        </div>
-        
-        <div class="patchworkcenterbox" id="home">
-            <div class="patchworkcontentwide" id="news">
-            </div>
-        </div>
-        
-        <div class="patchworkcenterbox" id="mission">
-            <div class="patchworkcontentwide">
-                <h1>Mission</h1>
-                <h2>Improving Software Development</h2>
-                <p>
-                    We are committed to improve ways to develop software by
+		<div class="patchworkcenter">
+			<div class="patchworkbackground1"></div>
+			<div class="patchworkbackground2"></div>
+			<div class="patchworkbackground3"></div>
+			<a href="" onclick="showNewsFeed(); return false;" title="Home"><img src="images/logo.png" class="patchworklogo"/></a>
+			<a class="patchworkname" href="" onclick="showNewsFeed(); return false;" title="Home">Patchwork Solutions AB</a>
+			<a class="patchworkinfo" href="mailto:info@patchworksolutions.com" title="Info">info@patchworksolutions.com</a>
+
+			<div class="patchworkmenu">
+				<a class="patchworktext" href="" onclick="showMission(); return false;" title="Mission">Mission</a>
+				<a class="patchworktext" href="" onclick="showAboutUs(); return false;" title="About us">About us</a>
+				<a class="patchworktext" href="" onclick="showOffering(); return false;" title="Offering">Offering</a>
+				<a class="patchworktext" href="" onclick="showContactInfo(); return false;" title="Contact">Contact</a>
+			</div>
+
+			<div class="patchworkblog">
+				<a class="patchworktext" href="http://blog.patchworksolutions.com" title="The Patchwork Blog">The Patchwork Blog</a>
+			</div>
+
+			<div class="patchworkcenterbox" id="home">
+				<div class="patchworkcontentwide" id="news">
+				</div>
+			</div>
+
+			<div class="patchworkcenterbox" id="mission">
+				<div class="patchworkcontentwide">
+					<h1>Mission</h1>
+					<h2>Improving Software Development</h2>
+					<p>
+						We are committed to improve ways to develop software by
+					</p>
 					<ul>
-					<li>Working with our customers, promoting and deploying the methods we believe in</li>
-					<li>Developing customized and automated work flows supporting these methods on top of tools we believe in</li>
-					<li>Contributing to these tools in the open source community to further promote the methods we believe in</li>
+						<li>Working with our customers, promoting and deploying the methods we believe in</li>
+						<li>Developing customized and automated work flows supporting these methods on top of tools we believe in</li>
+						<li>Contributing to these tools in the open source community to further promote the methods we believe in</li>
 					</ul>
-                </p>
-                <h2>Improving Cultural Understanding</h2>
-                <p>
-					We aim to continuously improve our cultural understanding by working globally and multiculturally
-                </p>
-            </div>
-        </div>
-        
-        <div id="aboutus">
-            <div class="patchworkleftbox">
-                <div class="patchworkcontent">
-                    <h1>Magnus Ernstsson</h1>
-                    <h2>CEO and Founder</h2>
-                    <p>
-                        Software architect with over ten years of experience in embedded 
-                        software development / software project management in large software 
-                        projects in the mobile phone industry and hands-on implementation of   
-                        agile processes and tools in SW infrastructure / platform environments.
-                    </p>
-                    <img src="images/ernstsson.png" class="patchworkcontentimage"/>
-                </div>
-            </div>
-            <div class="patchworkrightbox">
-                <div class="patchworkcontent">
-                    <h1>Daniel Hjort</h1>
-                    <h2>Software Developer and Partner</h2>
-                    <p>
-                        Software developer with over five years of experience of embedded software 
-                        development in the mobile phone industry.
-                    </p>
-                    <img src="images/hjort.png" class="patchworkcontentimage"/>
-                </div>
-            </div>
-        </div>
-        
-        <div class="patchworkcenterbox" id="offering">
-            <div class="patchworkcontentwide">
-                <h1>Offering</h1>
-				<h2>Business Improvement</h2>
-				<p>
-					We offer to help to improve Your company's business by analyzing Your needs and suggesting
-					and implementing changes in software development methods
-				</p>
-				<h2>Software Development</h2>
-				<p>
-					We offer to help Your company to develop software, with focus on tool and tool-chain development
-					and open source tool integration. We also offer to help Your company contributing and driving
-					changes in open source initiatives.
-				</p>
-            </div>
-        </div>
-        
-        <div id="contactinfo" class="patchworkcenterbox">
-            <div class="patchworkcontent">
-                <p><br><br><br><br><br><br><br><br>
-                    Patchwork Solutions AB<br>
-                    Turning Torso 352<br>
-                    211 15 Malm&ouml;<br>
-                    Sweden<br>
-                    <br>
-                    <a href="mailto:info@patchworksolutions.com" title="Info">
-                        info@patchworksolutions.com
-                    </a>
-                </p>
-                <img src="images/torso.png" class="patchworkcontentimage"/>
-            <a href="http://www.facebook.com/patchworksolutions" title="Facebook">
-                <img src="images/facebook.png" class="patchworkfacebook"/>
-            </a>
-            <a href="http://twitter.com/ptchwrk" title="Twitter">
-                <img src="images/twitter.png" class="patchworktwitter"/>
-            </a>
-            <a href="http://www.linkedin.com/companies/patchwork-solutions-ab" title="LinkedIn">
-                <img src="images/linkedin.png" class="patchworklinkedin"/>
-            </a>
-            <a href="http://blog.patchworksolutions.com" title="The Patchwork Blog">
-                <img src="images/wordpress.png" class="patchworkwordpress"/>
-            </a>
-            </div>
-        </div>
+				
+					<h2>Improving Cultural Understanding</h2>
+					<p>
+						We aim to continuously improve our cultural understanding by working globally and multiculturally
+					</p>
+				</div>
+			</div>
+
+			<div id="aboutus">
+				<div class="patchworkleftbox">
+					<div class="patchworkcontent">
+						<h1>Magnus Ernstsson</h1>
+						<h2>CEO and Founder</h2>
+						<p>
+							Software architect with over ten years of experience in embedded 
+							software development / software project management in large software 
+							projects in the mobile phone industry and hands-on implementation of   
+							agile processes and tools in SW infrastructure / platform environments.
+						</p>
+						<img src="images/ernstsson.png" class="patchworkcontentimage"/>
+					</div>
+				</div>
+				<div class="patchworkrightbox">
+					<div class="patchworkcontent">
+						<h1>Daniel Hjort</h1>
+						<h2>Software Developer and Partner</h2>
+						<p>
+							Software developer with over five years of experience of embedded software 
+							development in the mobile phone industry.
+						</p>
+						<img src="images/hjort.png" class="patchworkcontentimage"/>
+					</div>
+				</div>
+			</div>
+
+			<div class="patchworkcenterbox" id="offering">
+				<div class="patchworkcontentwide">
+					<h1>Offering</h1>
+					<h2>Business Improvement</h2>
+					<p>
+						We offer to help to improve Your company's business by analyzing Your needs and suggesting
+						and implementing changes in software development methods
+					</p>
+					<h2>Software Development</h2>
+					<p>
+						We offer to help Your company to develop software, with focus on tool and tool-chain development
+						and open source tool integration. We also offer to help Your company contributing and driving
+						changes in open source initiatives.
+					</p>
+				</div>
+			</div>
+
+			<div id="contactinfo" class="patchworkcenterbox">
+				<div class="patchworkcontent">
+					<p><br><br><br><br><br><br><br><br>
+						Patchwork Solutions AB<br>
+						Turning Torso 352<br>
+						211 15 Malm&ouml;<br>
+						Sweden<br>
+						<br>
+						<a href="mailto:info@patchworksolutions.com" title="Info">
+							info@patchworksolutions.com
+						</a>
+					</p>
+					<img src="images/torso.png" class="patchworkcontentimage"/>
+					<a href="http://www.facebook.com/patchworksolutions" title="Facebook">
+						<img src="images/facebook.png" class="patchworkfacebook"/>
+					</a>
+					<a href="http://twitter.com/ptchwrk" title="Twitter">
+						<img src="images/twitter.png" class="patchworktwitter"/>
+					</a>
+					<a href="http://www.linkedin.com/companies/patchwork-solutions-ab" title="LinkedIn">
+						<img src="images/linkedin.png" class="patchworklinkedin"/>
+					</a>
+					<a href="http://blog.patchworksolutions.com" title="The Patchwork Blog">
+						<img src="images/wordpress.png" class="patchworkwordpress"/>
+					</a>
+				</div>
+			</div>
+		</div>
 	</body>
 </html>
