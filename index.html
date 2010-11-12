@@ -25,19 +25,18 @@
 	</head>
 
 	<body onload="loadBody()" id="body">
-		<div class="patchworkbackground"></div>
-		<div class="patchworkmenubar">	</div>
+		<div class="patchworkmenubar"><img src="images/xml.png"/><img src="images/prompt.png"/><img src="images/code.png"/></div>
 		<div class="patchworkcenter">
 			<div class="patchworkmenutext">
-				<a class="patchworktext" href="" onclick="showOffering(); return false;" title="Offering">Offering</a>
-				<a class="patchworktext" href="http://blog.patchworksolutions.com" target="_blank" title="The Patchwork Blog">Blog</a>
-				<a class="patchworktext" href="" onclick="showContactInfo(); return false;" title="Contact">Contact</a>
-				<a class="patchworktext" href="" onclick="showMission(); return false;" title="Mission">Mission</a>
-				<a class="patchworktext" href="" onclick="showAboutUs(); return false;" title="About us">About us</a>
-
+				<a class="patchworktext" href="" onclick="showOffering(); return false;" title="offering">offering</a>
+				<a class="patchworktext" href="http://blog.patchworksolutions.com" target="_blank" title="the patchwork blog">blog</a>
+				<a class="patchworktext" href="" onclick="showApps(); return false;" title="projects">projects</a>
+				<a class="patchworktext" href="" onclick="showMission(); return false;" title="mission">mission</a>
+				<a class="patchworktext" href="" onclick="showAboutUs(); return false;" title="about us">about us</a>
+					<a class="patchworktext" href="" onclick="showContactInfo(); return false;" title="contact">contact</a>
 			</div>
-			<a href="" onclick="showNewsFeed(); return false;" title="Home"><img src="images/logo.png" class="patchworklogo"/></a>
-			<a class="patchworkname" href="" onclick="showNewsFeed(); return false;" title="Home">Patchwork Solutions AB</a>
+			<a href="" onclick="showNewsFeed(); return false;" title="home"><img src="images/logo.png" class="patchworklogo"/></a>
+			<a class="patchworkname" href="" onclick="showNewsFeed(); return false;" title="Home">patchwork solutions</a>
 
 			<div class="patchworkcenterbox" id="home">
 				<div class="patchworkcontentwide" id="news">
@@ -56,19 +55,46 @@
 						<li>Developing customized and automated work flows supporting these methods on top of tools we believe in</li>
 						<li>Contributing to these tools in the open source community to further promote the methods we believe in</li>
 					</ul>
-				
-					<h2>Improving Cultural Understanding</h2>
-					<p>
-						We aim to continuously improve our cultural understanding by working globally and multiculturally
-					</p>
 				</div>
+			</div>
+			
+			<div id="apps">
+			  <div class ="patchworkprojectbox">
+  				<div class="patchworkprojectcontentwide" style="height:260px;">
+  					<h2>GitHub Viewer for iPad</h2>
+  					<p style="width:210px;">
+  						A simple iPad application for browsing users, repositories, commits, files and issues on GitHub. <br><br>
+  						The application is free browsing public repositories and can be found in the <a href="itunesstore" title="GitHub Lite">iTunes Store</a>. 
+  						<br><br>If you would like to browse private repositories the full version can also be found in the <a href="itunesstore" title="GitHub">iTunes Store</a>.
+  					<a href="images/githubscreen.png" title="GitHub Viewer"><img src="images/githubapp.png" class="patchworkcontentimage"/></a>
+  					</p>
+  				</div>
+  			</div>
+  			<div class ="patchworkprojectbox" style="top:430px">
+  				<div class="patchworkprojectcontentwide" style="height:100px;">
+  					<h2>GitHubObjC</h2>
+  					<p>
+  						A lib wrapping the GitHub API in an Objective C API. The source can be found on 
+  						<a href="https://github.com/ernstsson/GitHubObjC" title="GitHubObjC">GitHub</a>.
+  					</p>
+
+  				</div>
+  			</div>
+  			<div class ="patchworkprojectbox" style="top:550px">
+  				<div class="patchworkprojectcontentwide" style="height:100px;">
+  					<h2>GravatarIDObjC</h2>
+  					<p>
+  						A lib wrapping the Gravatar API in an Objective C API. The source can be found on 
+  						<a href="https://github.com/ernstsson/GravatarIDObjC" title="GravatarIDObjC">GitHub</a>.
+  					</p>
+  				</div>
+  			</div>
 			</div>
 
 			<div id="aboutus">
 				<div class="patchworkleftbox">
 					<div class="patchworkcontent">
 						<h1>Magnus Ernstsson</h1>
-						<h2>CEO and Founder</h2>
 						<p>
 							Software architect with over ten years of experience in embedded 
 							software development / software project management in large software 
@@ -81,9 +107,11 @@
 				<div class="patchworkrightbox">
 					<div class="patchworkcontent">
 						<h1>Daniel Hjort</h1>
-						<h2>Software Developer and Partner</h2>
 						<p>
-							Software developer with over five years of experience of embedded software and application development in the mobile phone industry. Focused on the many aspects of daily life in the agile team and passionate about creating a stimulating and productive work environment.
+							Software developer with over five years of experience of embedded 
+							software and application development in the mobile phone industry. 
+							Focused on the many aspects of daily life in the agile team and passionate 
+							about creating a stimulating and productive work environment.
 						</p>
 						<img src="images/hjort.png" class="patchworkcontentimage"/>
 					</div>

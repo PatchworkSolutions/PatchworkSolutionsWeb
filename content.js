@@ -16,6 +16,7 @@ function loadBody() {
     document.getElementById("offering").style.visibility = "hidden";
     document.getElementById("home").style.visibility = "visible";
     document.getElementById("aboutus").style.visibility = "hidden";
+    document.getElementById("apps").style.visibility = "hidden";
 	document.getElementById("news").innerHTML = feed;
 }
 
@@ -25,6 +26,7 @@ function showHome() {
     document.getElementById("offering").style.visibility = "hidden";
     document.getElementById("home").style.visibility = "visible";
     document.getElementById("aboutus").style.visibility = "hidden";
+    document.getElementById("apps").style.visibility = "hidden";
 	document.getElementById("news").innerHTML = feed;
 }
 
@@ -34,6 +36,7 @@ function showMission() {
     document.getElementById("offering").style.visibility = "hidden";
     document.getElementById("home").style.visibility = "hidden";
     document.getElementById("aboutus").style.visibility = "hidden";
+    document.getElementById("apps").style.visibility = "hidden";
 }
 
 function showAboutUs() {
@@ -42,6 +45,16 @@ function showAboutUs() {
     document.getElementById("offering").style.visibility = "hidden";
     document.getElementById("home").style.visibility = "hidden";
     document.getElementById("aboutus").style.visibility = "visible";
+    document.getElementById("apps").style.visibility = "hidden";
+}
+
+function showApps() {
+    document.getElementById("contactinfo").style.visibility = "hidden";
+    document.getElementById("mission").style.visibility = "hidden";
+    document.getElementById("offering").style.visibility = "hidden";
+    document.getElementById("home").style.visibility = "hidden";
+    document.getElementById("aboutus").style.visibility = "hidden";
+    document.getElementById("apps").style.visibility = "visible";
 }
 
 function showOffering() {
@@ -50,6 +63,7 @@ function showOffering() {
     document.getElementById("offering").style.visibility = "visible";
     document.getElementById("home").style.visibility = "hidden";
     document.getElementById("aboutus").style.visibility = "hidden";
+    document.getElementById("apps").style.visibility = "hidden";
 }
 
 function showContactInfo() {
@@ -58,6 +72,7 @@ function showContactInfo() {
     document.getElementById("offering").style.visibility = "hidden";
     document.getElementById("home").style.visibility = "hidden";
     document.getElementById("aboutus").style.visibility = "hidden";
+    document.getElementById("apps").style.visibility = "hidden";
 }
 
 /*

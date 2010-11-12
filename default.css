@@ -3,19 +3,15 @@ body {
 	text-align: center;
 	margin: 0;
 	padding: 0;
+	background-color:#FFFFFF;
 }
 
 .patchworkcenter {
 	position:relative;
 	margin-left: auto;
 	margin-right: auto;
-	width: 1024px;
+	width:1024px;
 	text-align: left;
-}
-
-@font-face {
-	font-family: Patchwork;
-	src: url(fonts/bank.ttf);
 }
 
 .patchworkcontent {
@@ -27,7 +23,7 @@ body {
 	height:348px;
 
 	background: white;
-	border:1px solid black;
+	border:2px solid black;
 	-moz-border-radius:8px;
 	-webkit-border-radius:8px;
 	border-radius:8px;
@@ -39,10 +35,9 @@ body {
 	background:-moz-linear-gradient(top, #FFFFFF, #B0B0B0);
 	background:linear-gradient(top, #FFFFFF, #B0B0B0);
 
-	box-shadow: 2px 4px 5px #000000;
-	-moz-box-shadow: 2px 4px 5px #000000;
-/*	-webkit-box-shadow: 2px 4px 5px #000000;*/
-	-webkit-box-reflect:below 2px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.8, transparent), to(white));
+	box-shadow: 2px 4px 10px #000000;
+	-moz-box-shadow: 2px 4px 10px #000000;
+	-webkit-box-shadow: 2px 4px 10px #000000;
 	filter: progid:DXImageTransform.Microsoft.Shadow(Color=#000000, Direction=145);
 }
 
@@ -67,12 +62,37 @@ body {
 	background:-moz-linear-gradient(top, #FFFFFF, #B0B0B0);
 	background:linear-gradient(top, #FFFFFF, #B0B0B0);
 	
-	box-shadow: 2px 4px 5px #000000;
-	-moz-box-shadow: 2px 4px 5px #000000;
-	border:1px solid black;
-	-webkit-box-reflect:below 2px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.8, transparent), to(white));
-	/*-webkit-box-shadow: 2px 4px 5px #000000;*/
+	box-shadow: 2px 4px 10px #000000;
+	-moz-box-shadow: 2px 4px 10px #000000;
+	border:2px solid black;
+	-webkit-box-shadow: 2px 4px 10px #000000;
 	filter: progid:DXImageTransform.Microsoft.Shadow(Color=#000000, Direction=145);
+}
+
+.patchworkprojectcontentwide {
+	text-decoration:none;
+	font-family: sans-serif;
+	
+	display:block;
+	width:452px;
+	height:150px;
+
+	background: white;
+
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+
+	filter: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#FFFFFF,endColorStr=#B0B0B0);
+	-ms-filter: 'progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#FFFFFF,endColorStr=#B0B0B0)';
+	
+	background:-webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#B0B0B0));
+	background:-moz-linear-gradient(top, #FFFFFF, #B0B0B0);
+	background:linear-gradient(top, #FFFFFF, #B0B0B0);
+	-moz-box-shadow: 2px 4px 10px #000000;
+	-webkit-box-shadow: 2px 4px 10px #000000;
+	border:2px solid black;
+
 }
 
 
@@ -127,6 +147,35 @@ body {
 }
 
 .patchworkcontentwide li {
+	padding-left:15px;
+	font-size:14px;
+	width:390px;
+	color:#000000;
+}
+
+.patchworkprojectcontentwide h1 {
+	padding-top:10px;
+	padding-left:10px;
+	font-size:18px;
+	width:420px;
+	color:#214A66;
+}
+
+.patchworkprojectcontentwide h2 {
+	padding-left:10px;
+	font-size:15px;
+	width:420px;
+	color:#214A66;
+}
+
+.patchworkprojectcontentwide p {
+	padding-left:15px;
+	font-size:14px;
+	width:420px;
+	color:#000000;
+}
+
+.patchworkprojectcontentwide li {
 	padding-left:15px;
 	font-size:14px;
 	width:390px;
@@ -204,14 +253,14 @@ body {
 	position:absolute;
 	left:0px;
 	top:70px;
-	min-width:1024;
-	z-index:5;
+	z-index:0;
 	margin: 0;
 	padding: 0;
 
+  white-space:nowrap;
 	display:block;
 	width:100%;
-	height:40px;
+	height:60px;
 	line-height:40px;
 	
 	text-align:center;
@@ -225,15 +274,15 @@ body {
 	background:-webkit-gradient(linear, left top, left bottom, from(#214A66), to(#7BA7C4));
 	background:-moz-linear-gradient(top, #214A66, #7BA7C4);
 	background:linear-gradient(top, #214A66, #7BA7C4);
-	-webkit-box-shadow: 0px 4px 5px #000000;
+	-webkit-box-shadow: 0px 4px 10px #000000;
+	-moz-box-shadow: 2px 4px 10px #000000;
 	filter: progid:DXImageTransform.Microsoft.Shadow(Color=#000000, Direction=190);
 }
 
 .patchworkmenutext {
 	position:absolute;
 	left:0px;
-	top:70px;
-	min-width:1024;
+	top:80px;
 	z-index:6;
 	margin: 0;
 	padding: 0;
@@ -248,7 +297,7 @@ body {
 
 .patchworktext {
 	padding:0px 20px 0px 0px;
-	font-size:16px;
+	font-size:20px;
 	text-decoration:none;
 	color:#ffffff;
 	font-family: sans-serif;
@@ -256,13 +305,13 @@ body {
 
 .patchworkname {
 	position:absolute;
-	left:137px;
+	left:120px;
 	top:25px;
 	z-index:3;
 	font-size:25px;
 	text-decoration:none;
 	color:#214A66;
-	font-family: Patchwork, Copperplate, sans-serif;
+	font-family: sans-serif;
 }
 
 .patchworkleftbox {
@@ -286,24 +335,20 @@ body {
 	top:150px;
 }
 
-.patchworkbackground {
+.patchworkprojectbox {
+	z-index:32;
 	position:absolute;
-	left:0px;
-	top:0px;
-	z-index:0;
+	left:286px;
+	top:150px;
+}
 
+
+.patchworkgithubapp {
+	position:absolute;
+	left:42px;
+	bottom:5px;
+	z-index:33;
+	
 	display:block;
-	width:100%;
-	height:100%;
-	
-	background-color:#B0B0B0;
-
-	filter: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#B0B0B0,endColorStr=#FFFFFF);
-	-ms-filter: 'progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#B0B0B0,endColorStr=#FFFFFF)';
-	
-	background:-webkit-gradient(linear, left top, left bottom, from(#B0B0B0), to(#FFFFFF));
-	background:-moz-linear-gradient(top, #B0B0B0, #FFFFFF);
-	background:linear-gradient(top, #B0B0B0, #FFFFFF);
-
-
+	border:0;
 }
