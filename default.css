@@ -240,6 +240,17 @@ body {
 	border:0;
 }
 
+.patchworkgithub {
+	position:absolute;
+	left:153px;
+	bottom:5px;
+	z-index:36;
+	
+	display:block;
+	border:0;
+}
+
+
 .patchworklogo {
 	position:absolute;
 	left:10px;
@@ -311,6 +322,7 @@ body {
 	font-size:25px;
 	text-decoration:none;
 	color:#214A66;
+	font-weight: bold;
 	font-family: sans-serif;
 }
 
@@ -342,13 +354,3 @@ body {
 	top:150px;
 }
 
-
-.patchworkgithubapp {
-	position:absolute;
-	left:42px;
-	bottom:5px;
-	z-index:33;
-	
-	display:block;
-	border:0;
-}
