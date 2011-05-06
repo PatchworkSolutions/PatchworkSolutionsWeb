@@ -209,7 +209,7 @@ var patchworkPage = {
 			utils.script(twitterfeed),
 			{tag:'script', src:'http://api.twitter.com/1/statuses/' +
 				'user_timeline.json?' + 
-				'screen_name=ptchwrk&count=3&&callback=twitterfeed', body:""},
+				'screen_name=ptchwrk&count=4&include_rts=true&callback=twitterfeed', body:""},
 			utils.script(switchFocus),
 			utils.script(loadBody),
 			utils.loadScript(loadScript),
