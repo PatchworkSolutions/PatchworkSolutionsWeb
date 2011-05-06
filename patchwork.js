@@ -115,6 +115,12 @@ var boxStyle = utils.styleClass('box', [
 
 //Projects
 var sourceProjects = [
+	new Project('WebGenJS',
+		'A library interpreting a JavaScript object structure as XML or ' +
+		'HTML/CSS for generating a markup document. This webpage was ' +
+		'generated using WebGenJS',
+		'https://github.com/ernstsson/WebGenJS',
+		'GitHub'),
 	new Project('GitHubObjC',
 		'A lib wrapping the GitHub API in an Objective C API.',
 		'https://github.com/ernstsson/GitHubObjC',
