@@ -197,17 +197,21 @@ var patchworkPage = {
 				href:'images/icon32.png'},
 			{tag:'link', rel:'apple-touch-icon-precomposed',
 				href:'images/icon126.png'},
-			utils.script(twitterfeed),
 			utils.script(parseURL),
 			utils.script(parseUsername),
 			utils.script(parseHashtag),
+			utils.script(twitterfeed),
+			{tag:'script', src:'http://api.twitter.com/1/statuses/' +
+				'user_timeline.json?' + 
+				'screen_name=ptchwrk&count=3&&callback=twitterfeed', body:""},
 			utils.script(switchFocus),
 			utils.script(loadBody),
+			utils.loadScript(loadScript),
 			boxStyle,
 			boxPosition,
 		]},	
 		{tag:'body',
-			onload:'onLoad()', id:'body', body:[
+			onload:'loadBody()', style:{visibility:"hidden"}, id:'body', body:[
 			{style:nameStyle, tag:'a', title:'Home',
 				body:'patchwork solutions', onclick:'switchFocus(\'news\')'},
 			{style:menuBoxStyle, body:[
@@ -320,15 +324,11 @@ var patchworkPage = {
 				]},
 				{id:'aboutus', style:{position:'absolute',
 					left:'5%', right:'5%', top:'150px'},
-					body:[utils.gridLayout(employees, 2, 1)]},
+					body:utils.gridLayout(employees, 2, 1)},
 				{id:'projects', 'class':['boxpos'],
 						body:utils.verticalScalingLayout(sourceProjects, 1)},
 			]}
 		]},
-		{tag:'script', src:'http://api.twitter.com/1/statuses/' +
-		'user_timeline.json?' + 
-		'screen_name=ptchwrk&count=3&&callback=twitterfeed'},
-		utils.loadScript(loadScript)
 	]
 };
 
@@ -340,6 +340,7 @@ function loadScript() {
 
 function loadBody() {
 	switchFocus('news');
+	document.getElementById('body').style.visibility = "visible";
 	document.getElementById('news').innerHTML = feed;
 }
 
