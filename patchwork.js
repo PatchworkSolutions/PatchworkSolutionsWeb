@@ -27,93 +27,120 @@ The views and conclusions contained in the software and documentation are
 those of the authors and should not be interpreted as representing official 
 policies, either expressed or implied, of Patchwork Solutions AB.
 */
+
+"use strict";
+
 var webgenjs = require('webgenjs');
 var utils = webgenjs.htmlutils;
 var styleutils = webgenjs.styleutils;
 
 var headingStyle = {
-	'font-size':'20px',
-	color:'#214A66',
-	padding:4
+	'font-size': '20px',
+	color: '#214A66',
+	padding: 4
 };
 
 var subHeadingStyle = {
-	'font-size':'18px',
-	color:'#214A66',
-	padding:3
+	'font-size': '18px',
+	color: '#214A66',
+	padding: 3
 };
 
 var paragraphStyle = {
-	'font-size':'16px',
-	padding:2
+	'font-size': '16px',
+	padding: 2
 };
 
 var nameStyle = {
-	position:'absolute',
-	left:'120px',
-	top:'25px',
-	'font-size':'25px',
-	color:'#214A66',
-	'font-weight': 'bold',
-	'font-family':'sans-serif',
-	cursor:'hand'
+	position: 'absolute',
+	left: '120px',
+	top: '25px',
+	'font-size': '25px',
+	color: '#214A66',
+	'font-weight':  'bold',
+	'font-family': 'sans-serif',
+	cursor: 'hand'
 };
 
 var logoStyle = {
-	position:'absolute',
-	left:'10px',
-	top:'10px',
-	border:0,
-	cursor:'hand'
+	position: 'absolute',
+	left: '10px',
+	top: '10px',
+	border: 0,
+	cursor: 'hand'
 };
 
 var menuTextStyle = {
-	padding:'0px 20px 0px 0px',
-	'font-size':'20px',
-	'text-decoration':'none',
-	color:'#ffffff',
-	'font-family':'sans-serif',
-	cursor:'hand'
-}
+	padding: '0px 20px 0px 0px',
+	'font-size': '20px',
+	'text-decoration': 'none',
+	color: '#ffffff',
+	'font-family': 'sans-serif',
+	cursor: 'hand'
+};
 
 var menuStyle = {
-	position:'absolute',
-	left:'20%',
-	right:'20%',
-	top:'0%',
-	bottom:'0%',
-	'line-height':'60px',
-	'text-align':'center',
-}
+	position: 'absolute',
+	left: '20%',
+	right: '20%',
+	top: '0%',
+	bottom: '0%',
+	'line-height': '60px',
+	'text-align': 'center',
+};
 
-var menuBoxStyle = [{
-	position:'absolute',
-	left:'0%',
-	right:'0%',
-	top:'70px',
-	height:'60px',
-	'background-color':'#214A66'},
+var menuBoxStyle = [
 	styleutils.boxShadow('0px 4px 10px #000000'),
-	styleutils.linearGradientTop('#214A66', '#7BA7C4')
+	styleutils.linearGradientTop('#214A66', '#7BA7C4'),
+	{
+		position: 'absolute',
+		left: '0%',
+		right: '0%',
+		top: '70px',
+		height: '60px',
+		'background-color': '#214A66'
+	}
 ];
 
-var boxPosition= utils.styleClass('boxpos', {
-	position:'absolute',
-	top:'150px',
-	left:'20%',
-	right:'20%'
+var boxPosition = utils.styleClass('boxpos', {
+	position: 'absolute',
+	top: '150px',
+	left: '20%',
+	right: '20%'
 });
 
 var boxStyle = utils.styleClass('box', [
 	styleutils.borderRadius('10px'),
 	styleutils.boxShadow('2px 4px 10px #000000'),
 	styleutils.linearGradientTop('#FFFFFF', '#B0B0B0'),
-	{'text-decoration':'none',
-	border:'2px solid black',
-	padding:'10px 10px 10px 10px'
-}]);
+	{
+		'text-decoration': 'none',
+		border: '2px solid black',
+		padding: '10px 10px 10px 10px'
+	}
+]);
 
 //Projects
+function Project(name, desc, link, linkName) {
+	this.name = name;
+	this.desc = desc;
+	this.link = link;
+	this.linkName = linkName;
+	this.toJSML = function (callback) {
+		callback({'class': 'box', body: [
+			{style: subHeadingStyle, body: this.name},
+			{style: paragraphStyle,
+				body: [
+					this.desc + ' The source can be found on ',
+					{tag: 'a', href: this.link, title: this.name,
+						body: this.linkName},
+						'.'
+					]
+				},
+		]});
+	};
+}
+
 var sourceProjects = [
 	new Project('WebGenJS',
 		'A library interpreting a JavaScript object structure as XML or ' +
@@ -139,26 +166,22 @@ var sourceProjects = [
 		'GitHub')
 ];
 
-function Project(name, desc, link, linkName) {
+//Employees
+function Employee(name, desc, imageUrl) {
 	this.name = name;
 	this.desc = desc;
-	this.link = link;
-	this.linkName = linkName;
-	this.toJSML = function(callback) {
-		callback({'class':'box', body:[
-			{style:subHeadingStyle, body:this.name},
-			{style:paragraphStyle,
-				body:[
-				this.desc + ' The source can be found on ',
-				{tag:'a', href:this.link, title:this.name,
-					body:this.linkName},
-				'.'
-			]},
-		]});
+	this.imageUrl = imageUrl;
+	
+	this.toJSML = function (callback) {
+		callback({'class': 'box',
+			body: [
+				{style: headingStyle, body: this.name},
+				{style: paragraphStyle, body: this.desc},
+				{tag: 'img', src: this.imageUrl, width: '45%'}
+			]});
 	};
 }
 
-//Employees
 var employees = [
 	new Employee(
 		'Magnus Ernstsson',
@@ -167,7 +190,8 @@ var employees = [
 		'large software projects in the mobile phone industry and hands-on ' +
 		'implementation of agile processes and tools in SW infrastructure / ' +
 		'platform environments.',
-		'images/ernstsson.png'),
+		'images/ernstsson.png'
+	),
 	new Employee(
 		'Daniel Hjort',
 		'Software developer with over five years of experience of ' +
@@ -175,91 +199,144 @@ var employees = [
 		'industry. Focused on the many aspects of daily life in the agile ' +
 		'team and passionate about creating a stimulating and productive ' +
 		'work environment.',
-		'images/hjort.png'),
+		'images/hjort.png'
+	)
 ];
 
-function Employee(name, desc, imageUrl) {
-	this.name = name;
-	this.desc = desc;
-	this.imageUrl = imageUrl;
-	
-	this.toJSML = function(callback) {
-		callback({'class':'box',
-			body:[
-			{style:headingStyle, body:this.name},
-			{style:paragraphStyle, body:this.desc},
-			{tag:'img', src:this.imageUrl, width:'45%'}
-			]});
-	};
+//Events
+function switchFocus(item) {
+	var i;
+	var elements = [
+		'contactinfo',
+		'mission',
+		'offering', 
+		'news',
+		'aboutus',
+		'projects'];
+	elements.map(function (element) {
+		document.getElementById(element).style.display =
+		(element === item) ? 'inline' : 'none';
+	});
+}
+
+function loadBody() {
+	switchFocus('news');
+	document.getElementById('body').style.visibility = "visible";
+	document.getElementById('news').innerHTML = feed;
+}
+
+function loadScript() {
+	window.onload = loadBody;
+}
+
+function parseURL(text) {
+	return text.replace(
+		/[A-Za-z]+:\/\/[A-Za-z0-9-_]+\.[A-Za-z0-9-_:%&\?\/.=]+/g,
+		function (url) {
+			return url.link(url);
+		}
+	);
+}
+
+function parseUsername(text) {
+	return text.replace(/[@]+[A-Za-z0-9-_]+/g, function (u) {
+		var username = u.replace('@', '');
+		return u.link('http://twitter.com/' + username);
+	});
+}
+
+function parseHashtag(text) {
+	return text.replace(/[#]+[A-Za-z0-9-_]+/g, function (t) {
+		var tag = t.replace('#', '%23');
+		return t.link('http://search.twitter.com/search?q=' + tag);
+	});
+}
+
+function twitterfeed(feedItems) {
+	var feedItem;
+	feed = '<div style=\"font-size:20px;color:#214A66;padding:4\">News</div>';
+	for (feedItem in feedItems) {
+		if (feedItems.hasOwnProperty(feedItem)) {
+			feed = feed + '<div style=\"' + 
+				'font-size:18px;color:#214A66;padding:3\">' +
+				feedItems[feedItem].created_at.substr(0, 10) + '</div>' +
+				'<div style=\"font-size:16px;padding:2\">' +
+				parseUsername(parseHashtag(parseURL(
+					feedItems[feedItem].text
+				))) +
+				'</div>';
+		}
+	}
 }
 
 //The Patchwork Page
 var patchworkPage = {
-	tag:'html',
-	body:[
-		{tag:'head', body:[
-			{tag:'title', body:'Patchwork Solutions'},
-			{tag:'link', rel:'icon', type:'image/png',
-				href:'images/icon32.png'},
-			{tag:'link', rel:'apple-touch-icon-precomposed',
-				href:'images/icon126.png'},
+	tag: 'html',
+	body: [
+		{tag: 'head', body: [
+			{tag: 'title', body: 'Patchwork Solutions'},
+			{tag: 'link', rel: 'icon', type: 'image/png',
+				href: 'images/icon32.png'},
+			{tag: 'link', rel: 'apple-touch-icon-precomposed',
+				href: 'images/icon126.png'},
 			utils.script(parseURL),
 			utils.script(parseUsername),
 			utils.script(parseHashtag),
 			utils.script(twitterfeed),
-			{tag:'script', src:'http://api.twitter.com/1/statuses/' +
+			{tag: 'script', src: 'http://api.twitter.com/1/statuses/' +
 				'user_timeline.json?' + 
-				'screen_name=ptchwrk&count=4&include_rts=true&callback=twitterfeed', body:""},
+				'screen_name=ptchwrk&count=4&include_rts=true&' +
+				'callback=twitterfeed', body: ""},
 			utils.script(switchFocus),
 			utils.script(loadBody),
 			utils.loadScript(loadScript),
 			boxStyle,
 			boxPosition,
 		]},	
-		{tag:'body',
-			onload:'loadBody()', style:{visibility:"hidden"}, id:'body', body:[
-			{style:nameStyle, tag:'a', title:'Home',
-				body:'patchwork solutions', onclick:'switchFocus(\'news\')'},
-			{style:menuBoxStyle, body:[
+		{tag: 'body', onload: 'loadBody()', style: {visibility: "hidden"},
+			id: 'body', body: [
+			{style: nameStyle, tag: 'a', title: 'Home',
+				body: 'patchwork solutions', onclick: 'switchFocus(\'news\')'},
+			{style: menuBoxStyle, body: [
 					utils.horizontalLayout([
 						utils.scalingImage('images/xml.png'),
 						utils.scalingImage('images/prompt.png'),
 						utils.scalingImage('images/code.png')], 1),
-					{style:menuStyle, body:[
-						{style:menuTextStyle, tag:'a', title:'offering',
-							body:'offering',
-							onclick:'switchFocus(\'offering\')'},
-						{style:menuTextStyle, tag:'a',
-							href:'http://blog.patchworksolutions.com',
-							target:'_blank', title:'the patchwork blog',
-							body:'blog'},
-						{style:menuTextStyle, tag:'a', title:'projects',
-							body:'projects',
-							onclick:'switchFocus(\'projects\')'},
-						{style:menuTextStyle, tag:'a', title:'mission',
-							body:'mission',
-							onclick:'switchFocus(\'mission\')'},
-						{style:menuTextStyle, tag:'a', title:'about us',
-							body:'about us',
-							onclick:'switchFocus(\'aboutus\')'},
-						{style:menuTextStyle, tag:'a', title:'contact',
-							body:'contact',
-							onclick:'switchFocus(\'contactinfo\')'},
+					{style: menuStyle, body: [
+						{style: menuTextStyle, tag: 'a', title: 'offering',
+							body: 'offering',
+							onclick: 'switchFocus(\'offering\')'},
+						{style: menuTextStyle, tag: 'a',
+							href: 'http://blog.patchworksolutions.com',
+							target: '_blank', title: 'the patchwork blog',
+							body: 'blog'},
+						{style: menuTextStyle, tag: 'a', title: 'projects',
+							body: 'projects',
+							onclick: 'switchFocus(\'projects\')'},
+						{style: menuTextStyle, tag: 'a', title: 'mission',
+							body: 'mission',
+							onclick: 'switchFocus(\'mission\')'},
+						{style: menuTextStyle, tag: 'a', title: 'about us',
+							body: 'about us',
+							onclick: 'switchFocus(\'aboutus\')'},
+						{style: menuTextStyle, tag: 'a', title: 'contact',
+							body: 'contact',
+							onclick: 'switchFocus(\'contactinfo\')'},
 					]},
 			]},
-			{style:logoStyle, tag:'a', title:'home',
-				body:{tag:'img', src:'images/logo.png'},
-				onclick:'switchFocus(\'news\')'},
-			{body:[
-				{'class':['box', 'boxpos'], id:'news', body:''},
-				{'class':['box', 'boxpos'], id:'mission', body:[
-					{style:headingStyle, body:'Mission'},
-					{style:subHeadingStyle,
-						body:'Improving Software Development'},
-					{style:paragraphStyle,
-						body:'We are committed to improve ways to ' +
+			{style: logoStyle, tag: 'a', title: 'home',
+				body: {tag: 'img', src: 'images/logo.png'},
+				onclick: 'switchFocus(\'news\')'},
+			{body: [
+				{'class': ['box', 'boxpos'], id: 'news', body: ''},
+				{'class': ['box', 'boxpos'], id: 'mission', body: [
+					{style: headingStyle, body: 'Mission'},
+					{style: subHeadingStyle,
+						body: 'Improving Software Development'},
+					{style: paragraphStyle,
+						body: 'We are committed to improve ways to ' +
 						'develop software by'},
-					{style:paragraphStyle, body:[utils.bulletedList([
+					{style: paragraphStyle, body: [utils.bulletedList([
 						'Working with our customers, promoting and ' +
 							'deploying the methods we believe in',
 						'Developing customized and automated work flows ' +
@@ -270,27 +347,27 @@ var patchworkPage = {
 							'believe in'
 					], paragraphStyle)]},
 				]},
-				{'class':['box', 'boxpos'], id:'offering', body:[
-					{style:headingStyle, body:'Offering'},
-					{style:subHeadingStyle,
-						body:'Business Improvement'},
-					{style:paragraphStyle,
-						body:'We offer to help to improve Your ' +
+				{'class': ['box', 'boxpos'], id: 'offering', body: [
+					{style: headingStyle, body: 'Offering'},
+					{style: subHeadingStyle,
+						body: 'Business Improvement'},
+					{style: paragraphStyle,
+						body: 'We offer to help to improve Your ' +
 						'company\'s business by analyzing Your needs and ' +
 						'suggesting and implementing changes in software ' +
 						'development methods'},
-					{style:subHeadingStyle,
-						body:'Software Development'},
-					{style:paragraphStyle,
-						body:'We offer to help Your company to ' +
+					{style: subHeadingStyle,
+						body: 'Software Development'},
+					{style: paragraphStyle,
+						body: 'We offer to help Your company to ' +
 						'develop software, with focus on tool and ' +
 						'tool-chain development and open source tool ' +
 						'integration. We also offer to help Your company ' +
 						'contributing and driving changes in open source ' +
 						'initiatives.'},
 					]},
-				{'class':['box', 'boxpos'], id:'contactinfo', body:[
-					{style:paragraphStyle, body:[
+				{'class': ['box', 'boxpos'], id: 'contactinfo', body: [
+					{style: paragraphStyle, body: [
 						'Patchwork Solutions AB',
 						utils.br,
 						'Kalmargatan 36',
@@ -299,106 +376,45 @@ var patchworkPage = {
 						utils.br,
 						'Sweden',
 						utils.br,
-						{tag:'a', href:'mailto:info@patchworksolutions.com',
-							title:'Info', body:'info@patchworksolutions.com'},
+						{tag: 'a', href: 'mailto:info@patchworksolutions.com',
+							title: 'Info', body: 'info@patchworksolutions.com'},
 					]},
-					{tag:'a', title:'Facebook',
-						style:{'text-decoration':'none'},
-						href:'http://www.facebook.com/patchworksolutions',
-						body:{tag:'img', src:'images/facebook.png'}
+					{tag: 'a', title: 'Facebook',
+						style: {'text-decoration': 'none'},
+						href: 'http://www.facebook.com/patchworksolutions',
+						body: {tag: 'img', src: 'images/facebook.png'}
 					},
-					{tag:'a', href:'http://www.twitter.com/ptchwrk',
-						title:'Twitter', style:{'text-decoration':'none'},
-						body:{tag:'img', src:'images/twitter.png'}
+					{tag: 'a', href: 'http://www.twitter.com/ptchwrk',
+						title: 'Twitter', style: {'text-decoration': 'none'},
+						body: {tag: 'img', src: 'images/twitter.png'}
 					},
-					{tag:'a', title:'LinkedIn',
-						style:{'text-decoration':'none'},
-						href:'http://www.linkedin.com/companies/' +
+					{tag: 'a', title: 'LinkedIn',
+						style: {'text-decoration': 'none'},
+						href: 'http://www.linkedin.com/companies/' +
 							'patchwork-solutions-ab',
-						body:{tag:'img', src:'images/linkedin.png'}
+						body: {tag: 'img', src: 'images/linkedin.png'}
 					},
-					{tag:'a', title:'The Patchwork Blog',
-						style:{'text-decoration':'none'},
-						href:'http://blog.patchworksolutions.com',
-						body:{tag:'img', src:'images/wordpress.png'}
+					{tag: 'a', title: 'The Patchwork Blog',
+						style: {'text-decoration': 'none'},
+						href: 'http://blog.patchworksolutions.com',
+						body: {tag: 'img', src: 'images/wordpress.png'}
 					},
-					{tag:'a', title:'GitHub',
-						style:{'text-decoration':'none'},
-						href:'https://github.com/PatchworkSolutions',
-						body:{tag:'img', src:'images/github.png'}
+					{tag: 'a', title: 'GitHub',
+						style: {'text-decoration': 'none'},
+						href: 'https://github.com/PatchworkSolutions',
+						body: {tag: 'img', src: 'images/github.png'}
 					}
 				]},
-				{id:'aboutus', style:{position:'absolute',
-					left:'5%', right:'5%', top:'150px'},
-					body:utils.gridLayout(employees, 2, 1)},
-				{id:'projects', 'class':['boxpos'],
-						body:utils.verticalScalingLayout(sourceProjects, 1)},
+				{id: 'aboutus', style: {position: 'absolute',
+					left: '5%', right: '5%', top: '150px'},
+					body: utils.gridLayout(employees, 2, 1)},
+				{id: 'projects', 'class': ['boxpos'],
+						body: utils.verticalScalingLayout(sourceProjects, 1)},
 			]}
 		]},
 	]
 };
 
-//Events
-
-function loadScript() {
-	window.onload = loadBody;
-}
-
-function loadBody() {
-	switchFocus('news');
-	document.getElementById('body').style.visibility = "visible";
-	document.getElementById('news').innerHTML = feed;
-}
-
-function switchFocus(item) {
-	var elements = [
-		'contactinfo',
-		'mission',
-		'offering', 
-		'news',
-		'aboutus',
-		'projects'];
-		
-	for (var index in elements) {
-		document.getElementById(elements[index]).style.display =
-			(elements[index] == item) ? 'inline' : 'none';
-	}
-}
-
-function twitterfeed(feedItems) {
-	feed = '<div style=\"font-size:20px;color:#214A66;padding:4\">News</div>';
-	for (feedItem in feedItems) {
-		feed = feed + '<div style=\"' + 
-			'font-size:18px;color:#214A66;padding:3\">' +
-			feedItems[feedItem].created_at.substr(0, 10) + '</div>' +
-			'<div style=\"font-size:16px;padding:2\">' +
-			parseUsername(parseHashtag(parseURL(feedItems[feedItem].text))) +
-			'</div>';
-	}
-}
-
-function parseURL(text) {
-	return text.replace(
-		/[A-Za-z]+:\/\/[A-Za-z0-9-_]+\.[A-Za-z0-9-_:%&\?\/.=]+/g,
-		function(url) {
-			return url.link(url);
-	});
-};
-
-function parseUsername(text) {
-	return text.replace(/[@]+[A-Za-z0-9-_]+/g, function(u) {
-		var username = u.replace('@','')
-		return u.link('http://twitter.com/' + username);
-	});
-};
-
-function parseHashtag(text) {
-	return text.replace(/[#]+[A-Za-z0-9-_]+/g, function(t) {
-		var tag = t.replace('#','%23')
-		return t.link('http://search.twitter.com/search?q=' + tag);
-	});
-};
-
-webgenjs.htmlgen.generateHTML(patchworkPage, function(result) {
+webgenjs.htmlgen.generateHTML(patchworkPage, function (result) {
 	console.log(result);
 });
