@@ -127,7 +127,7 @@ function Project(name, desc, link, linkName) {
 	this.link = link;
 	this.linkName = linkName;
 	this.toJSML = function (callback) {
-		callback({'class': 'box', body: [
+		callback(null, {'class': 'box', body: [
 			{style: subHeadingStyle, body: this.name},
 			{style: paragraphStyle,
 				body: [
@@ -173,7 +173,7 @@ function Employee(name, desc, imageUrl) {
 	this.imageUrl = imageUrl;
 	
 	this.toJSML = function (callback) {
-		callback({'class': 'box',
+		callback(null, {'class': 'box',
 			body: [
 				{style: headingStyle, body: this.name},
 				{style: paragraphStyle, body: this.desc},
@@ -415,6 +415,6 @@ var patchworkPage = {
 	]
 };
 
-webgenjs.htmlgen.generateHTML(patchworkPage, function (result) {
+webgenjs.htmlgen.generateHTML(patchworkPage, function (err, result) {
 	console.log(result);
 });
