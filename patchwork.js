@@ -120,6 +120,34 @@ var boxStyle = utils.styleClass('box', [
 	}
 ]);
 
+var logo = {style:[
+	{width: '90', height: '90', position: 'absolute'},
+	styleutils.boxShadow('2px 4px 10px #000000'),
+	styleutils.linearGradientTop('#FFFFFF', '#B0B0B0'),
+	styleutils.rotate(-6)
+	],
+	body: [
+		{body: '', style:[{
+			position: 'absolute',
+			left: 0,
+			top: 0,
+			width: '50%',
+			height: '50%'
+			},
+			styleutils.linearGradientTop('#93C181', '#114821')
+		]},
+		{body: '', style:[{
+			position: 'absolute',
+			right: 0,
+			bottom: 0,
+			width: '50%',
+			height: '50%'
+			},
+			styleutils.linearGradientTop('#214A66', '#7BA7C4')
+		]},
+	]
+};
+
 //Projects
 function Project(name, desc, link, linkName) {
 	this.name = name;
@@ -325,7 +353,7 @@ var patchworkPage = {
 					]},
 			]},
 			{style: logoStyle, tag: 'a', title: 'home',
-				body: {tag: 'img', src: 'images/logo.png'},
+				body: logo,
 				onclick: 'switchFocus(\'news\')'},
 			{body: [
 				{'class': ['box', 'boxpos'], id: 'news', body: ''},
