@@ -1,0 +1,4 @@
+GravatarIDObjC
+A lib wrapping the Gravatar API in an Objective C API.
+https://github.com/ernstsson/GravatarIDObjC
+GitHub

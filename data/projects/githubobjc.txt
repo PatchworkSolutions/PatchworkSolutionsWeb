@@ -1,0 +1,4 @@
+GitHubObjC
+A lib wrapping the GitHub API in an Objective C API.
+https://github.com/ernstsson/GitHubObjC
+GitHub
