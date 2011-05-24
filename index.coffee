@@ -81,14 +81,14 @@ class Project
 			'class': 'box'
 			body: [
 				{tag: 'h2'
-				body: this.name}
+				body: @name}
 				{tag: 'p'
 				body: [
-					"#{this.desc} The source can be found on "
+					"#{@desc} The source can be found on "
 					{tag: 'a'
-					href: this.link
-					title: this.name
-					body: this.linkName}
+					href: @link
+					title: @name
+					body: @linkName}
 					'.'
 				]}
 			]
@@ -153,11 +153,11 @@ class Employee
 			'class': 'box'
 			body: [
 				{tag: 'h1'
-				body: this.name}
+				body: @name}
 				{tag: 'p'
-				body: this.desc}
+				body: @desc}
 				{tag: 'img'
-				src: this.imageUrl
+				src: @imageUrl
 				width: '45%'}
 			]
 		}
