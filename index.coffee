@@ -416,12 +416,12 @@ switchFocus = (item) ->
 		document.getElementById(element).style.display =
 			if element is item then 'inline' else 'none'
 
-loadBody = () ->
+loadBody = ->
 	switchFocus 'news'
 	document.getElementById('body').style.visibility = "visible"
 	document.getElementById('news').innerHTML = @feed
 
-loadScript = () ->
+loadScript = ->
 	window.onload = loadBody
 
 headingStyle = utils.cssSelector 'h1', [
